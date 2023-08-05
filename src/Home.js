@@ -47,7 +47,7 @@ function Home() {
             <span ref={el}></span>
           </h1>
         </div> */}
-        <div className="absolute top-16 md:top-24 left-10 w-full h-1/2">
+        <div className="absolute top-16 md:top-48 left-10 w-full h-1/2">
           <h1 className="text-2xl md:text-5xl text-white font-sans font-medium animate__animated animate__backInDown ">
             Hello,I am
           </h1>
@@ -58,7 +58,7 @@ function Home() {
             Front end Designer | Developer
           </p>
         </div>
-        <div className=" top-[300px] md:top-[500px] left-2 right-2 z-50 bg-white  md:flex grid grid-rows-3 border-1px border-black mx-1">
+        <div className="z-50 bg-white  md:flex grid grid-rows-3 border-1px border-black mx-1">
           <card className="text-center md:px-16 md:py-12 px-5 py-5 md:items-center border border-black animate__animated animate__fadeInUp">
             <div>
               <h1 className="text-3xl  ">Who am I?</h1>

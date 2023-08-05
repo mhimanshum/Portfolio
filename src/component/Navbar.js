@@ -15,7 +15,7 @@ function Navbar() {
   };
   return (
     <div>
-      <div className="flex shadow-md shadow-black bg-white relative px-5">
+      <div className="flex shadow-md shadow-black z-50 bg-white relative px-5">
         <div className="z-50 w-full h-28 flex justify-between items-center ">
           <div className="animate__animated animate__slideInLeft">
             <img
