@@ -14,8 +14,8 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
-      <div className="flex shadow-md shadow-black z-50 bg-white relative px-5">
+    <header className="sticky top-0 z-30">
+      <div className=" flex shadow-md shadow-black z-50 bg-white relative px-5">
         <div className="z-50 w-full h-28 flex justify-between items-center ">
           <div className="animate__animated animate__slideInLeft">
             <img
@@ -29,13 +29,13 @@ function Navbar() {
           </div>
           <div className="hidden items-center absolute right-0 md:flex mr-5 gap-4 text-lg font-serif font-bold animate__animated animate__slideInRight">
             <Link to="/blog" className="hover:text-red-600">
-              Blog
+              BLOG
             </Link>
             <Link to="/memories" className="hover:text-red-600">
-              Memories
+              MEMORIES
             </Link>
             <Link to="/contact" className="hover:text-red-600">
-              Contact
+              CONTACT
             </Link>
           </div>
           <div onClick={handleNav} className="block md:hidden items-center">
@@ -95,7 +95,7 @@ function Navbar() {
           </ul>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
