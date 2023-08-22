@@ -3,6 +3,13 @@ import 'animate.css';
 import axios from 'axios';
 import Typed from 'typed.js';
 import him3 from './him3.jpg';
+import { AiOutlineHtml5 } from 'react-icons/ai';
+import { BiLogoCss3 } from 'react-icons/bi';
+import { RiReactjsLine } from 'react-icons/ri';
+import { TbBrandNextjs, TbBrandTailwind } from 'react-icons/tb';
+import { FcLinux } from 'react-icons/fc';
+import { BsBootstrap, BsMicrosoft } from 'react-icons/bs';
+import { DiMaterializecss, DiJavascript } from 'react-icons/di';
 
 function Home() {
   const [quote, setQuote] = useState([]);
@@ -61,14 +68,14 @@ function Home() {
         <div className="z-50 bg-white  md:flex grid grid-rows-3 border-1px border-black mx-1">
           <card className="text-center md:px-16 md:py-12 px-5 py-5 md:items-center border border-black animate__animated animate__fadeInUp">
             <div>
-              <h1 className="text-3xl  ">Who am I?</h1>
+              <h1 className="text-3xl text-gray-500 font-bold ">Who am I?</h1>
               <h1 className="text-3xl font-semibold -mt-4 text-red-400">
                 ----{' '}
               </h1>
               <h4 className="text-xl md:w-80 mt-6 font-semibold">
                 A Web Designer / Developer Located In Our Lovely Earth
               </h4>
-              <p className="md:w-80 mt-5">
+              <p className="md:w-80 mt-2">
                 If there’s one thing you learn by working on a lot of different
                 Web sites, it’s that almost any design idea–no matter how
                 appallingly bad–can be made usable in the right circumstances,
@@ -76,10 +83,12 @@ function Home() {
               </p>
             </div>
           </card>
-          <card className="md:px-16 md:py-12 px-5 py-5 border border-black animate__animated animate__fadeInUp">
+          <card className=" md:px-16 md:py-12 px-5 py-5 border border-black animate__animated animate__fadeInUp">
             <div>
-              <h1 className="text-3xl  ">Personal info</h1>
-              <h1 className="text-3xl font-semibold -mt-4 text-red-400">
+              <h1 className="text-3xl text-center text-gray-500 font-bold  ">
+                Personal info
+              </h1>
+              <h1 className="text-3xl text-center font-semibold -mt-4 text-red-400">
                 ----{' '}
               </h1>
               <p className="font-thin text-gray-500 mt-6">
@@ -107,19 +116,82 @@ function Home() {
               </p>
             </div>
           </card>
-          <card className="text-center md:px-16 md:py-12 px-5 py-5 border border-black animate__animated animate__fadeInUp">
+          <card className="md:px-16 md:py-12 border border-black animate__animated animate__fadeInUp">
             <div>
-              <h1 className="text-3xl  ">Expertise</h1>
-              <h1 className="text-3xl font-semibold -mt-4 text-red-400">
+              <h1 className="text-3xl text-center text-gray-500 font-bold">
+                Expertise
+              </h1>
+              <h1 className="text-3xl font-semibold -mt-4 text-red-400 text-center">
                 ----{' '}
               </h1>
-              <h4 className="text-xl md:w-80 mt-6 font-semibold">
-                A Web Designer / Developer Located In Our Lovely Earth
-              </h4>
-              <p className="md:w-80 mt-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.sit
-                amet, Qui deserunt consequatur fugit repellendusillo voluptas?
-              </p>
+              <div className="flex">
+                <div className="w-40 text-center">
+                  <div className="flex mt-5 gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <AiOutlineHtml5 />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">HTML5</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <BiLogoCss3 />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">CSS3</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <RiReactjsLine />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">ReactJS</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <TbBrandNextjs />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">NextJS</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <TbBrandTailwind />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">Tailwind</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <FcLinux />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">Linux</p>
+                  </div>
+                </div>
+                <div className="w-40 text-center">
+                  <div className="flex mt-5 gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <BsBootstrap />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">Bootstrap</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <DiMaterializecss />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">MaterialUI</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <DiJavascript />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">Javascript</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <h1 className="text-3xl font-semibold text-red-400">
+                      <BsMicrosoft />
+                    </h1>
+                    <p className="text-xl md:w-80 text-gray-500">
+                      Microsoft365
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </card>
         </div>
