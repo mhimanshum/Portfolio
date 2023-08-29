@@ -18,17 +18,14 @@ function Home() {
     const handleSearch = async () => {
       try {
         const res = await axios.get('https://type.fit/api/quotes');
-        console.log(res);
         const que = res.data.map((ele) => ele.text);
-        console.log(que);
         setQuote(que);
-        console.log(typeof quote[0]);
         const typed = new Typed(el.current, {
           strings: que,
-          startDelay: 50,
-          typeSpeed: 40,
-          backSpeed: 50,
-          backDelay: 600,
+          // startDelay: 50,
+          // typeSpeed: 30,
+          // backSpeed: 40,
+          // backDelay: 200,
         });
 
         return () => {
@@ -40,21 +37,16 @@ function Home() {
     };
 
     handleSearch();
-  }, []);
+  }, 10000);
   return (
-    <div>
+    <div className="w-full">
       <div className="relative bg-white">
         <img
           src={him3}
           alt="parallax"
           className="w-full -z-50 brightness-50 px-1"
         ></img>
-        {/* <div className=" absolute top-0 flex w-full justify-center">
-          <h1 className="text-3xl mt-32 font-bold text-center w-96 h-16">
-            <span ref={el}></span>
-          </h1>
-        </div> */}
-        <div className="absolute top-16 md:top-48 left-10 w-full h-1/2">
+        <div className="absolute top-16 md:top-48 left-10 h-1/2">
           <h1 className="text-2xl md:text-5xl text-white font-sans font-medium animate__animated animate__backInDown ">
             Hello,I am
           </h1>
@@ -124,39 +116,39 @@ function Home() {
               <h1 className="text-3xl font-semibold -mt-4 text-red-400 text-center">
                 ----{' '}
               </h1>
-              <div className="flex">
-                <div className="w-40 text-center">
-                  <div className="flex mt-5 gap-2">
+              <div className="grid grid-cols-2 gap-5 text-center ml-10 gap-10 md:ml-5">
+                <div className="text-center">
+                  <div className="flex mt-5">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <AiOutlineHtml5 />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">HTML5</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <BiLogoCss3 />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">CSS3</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <RiReactjsLine />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">ReactJS</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <TbBrandNextjs />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">NextJS</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <TbBrandTailwind />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">Tailwind</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <FcLinux />
                     </h1>
@@ -164,25 +156,25 @@ function Home() {
                   </div>
                 </div>
                 <div className="w-40 text-center">
-                  <div className="flex mt-5 gap-2">
+                  <div className="flex mt-5 ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <BsBootstrap />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">Bootstrap</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <DiMaterializecss />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">MaterialUI</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <DiJavascript />
                     </h1>
                     <p className="text-xl md:w-80 text-gray-500">Javascript</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex ">
                     <h1 className="text-3xl font-semibold text-red-400">
                       <BsMicrosoft />
                     </h1>
@@ -194,6 +186,11 @@ function Home() {
               </div>
             </div>
           </card>
+        </div>
+        <div className="flex h-96  justify-center text-center px-10 py-10">
+          <h1 className="text-xl items-center text-center w-96">
+            <span ref={el}></span>
+          </h1>
         </div>
       </div>
     </div>
