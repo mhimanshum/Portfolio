@@ -44,7 +44,7 @@ function Home() {
         <img
           src={him3}
           alt="parallax"
-          className="w-full -z-50 brightness-50 px-1"
+          className="w-full -z-50 brightness-50 px-1 md:h-[500px] object-contain md:object-cover mr-20 md:mr-0"
         ></img>
         <div className="absolute top-16 md:top-48 left-10 h-1/2">
           <h1 className="text-2xl md:text-5xl text-white font-sans font-medium animate__animated animate__backInDown ">
@@ -57,8 +57,8 @@ function Home() {
             Front end Designer | Developer
           </p>
         </div>
-        <div className="z-50 bg-white  md:flex grid grid-rows-3 border-1px border-black mx-1">
-          <card className="text-center md:px-16 md:py-12 px-5 py-5 md:items-center border border-black animate__animated animate__fadeInUp">
+        <div className="z-50 bg-white  md:flex grid grid-rows-3 border-1px border-gray-600 mx-1">
+          <card className="text-center md:px-16 md:py-12 px-5 py-5 md:items-center border border-gray-400 animate__animated animate__fadeInUp">
             <div>
               <h1 className="text-3xl text-gray-500 font-bold ">Who am I?</h1>
               <h1 className="text-3xl font-semibold -mt-4 text-red-400">
@@ -75,9 +75,9 @@ function Home() {
               </p>
             </div>
           </card>
-          <card className=" md:px-16 md:py-12 px-5 py-5 border border-black animate__animated animate__fadeInUp">
+          <card className=" md:px-16 md:py-12 px-5 py-5 border border-gray-400 animate__animated animate__fadeInUp">
             <div>
-              <h1 className="text-3xl text-center text-gray-500 font-bold  ">
+              <h1 className="text-3xl text-center text-gray-500 font-bold ">
                 Personal info
               </h1>
               <h1 className="text-3xl text-center font-semibold -mt-4 text-red-400">
@@ -108,7 +108,7 @@ function Home() {
               </p>
             </div>
           </card>
-          <card className="md:px-16 md:py-12 border border-black animate__animated animate__fadeInUp">
+          <card className="md:px-16 md:py-12 py-5 border border-gray-400 animate__animated animate__fadeInUp">
             <div>
               <h1 className="text-3xl text-center text-gray-500 font-bold">
                 Expertise
@@ -187,10 +187,86 @@ function Home() {
             </div>
           </card>
         </div>
-        <div className="flex h-96  justify-center text-center px-10 py-10">
+        {/* <div className="flex h-96  justify-center text-center px-10 py-10">
           <h1 className="text-xl items-center text-center w-96">
             <span ref={el}></span>
           </h1>
+        </div> */}
+
+        <div className="mx-1">
+          <h1 className="text-4xl font-serif ml-20 mt-12 mb-10 flex gap-2">
+            <h1 className="text-red-500">My</h1> Resume
+          </h1>
+          <div className="md:grid md:grid-cols-3">
+            <div className="md:w-96 w-full  border border-gray-500 px-8 py-5">
+              <h1 className="text-2xl font-medium">Expertise</h1>
+              <h1 className="text-2xl text-red-500 -mt-3">-----</h1>
+              <h1 className="text-2xl text-red-500 font-mono mt-2">
+                2022-Present
+              </h1>
+              <h1 className="mt-2 text-gray-600">Front-End-Developer</h1>
+              <p className="w-80 mt-3 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum recusandae, cupiditate ullam dolor ratione
+                repellendus.aliquid repudiandae saepe!.
+              </p>
+              <hr className="mt-3" />
+              <h1 className="mt-2 text-gray-600">Back-End-Developer</h1>
+              <p className="w-80 mt-3 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum recusandae, cupiditate ullam dolor ratione
+                repellendus.aliquid repudiandae saepe!.
+              </p>
+              <hr className="mt-3" />
+              <h1 className="mt-2 text-gray-600">UX-Designer</h1>
+              <p className="w-80 mt-3 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum recusandae, cupiditate ullam dolor ratione
+                repellendus.aliquid repudiandae saepe!.
+              </p>
+            </div>
+            <div className="md:w-96 w-full border border-gray-500 px-8 py-5">
+              <h1 className="text-2xl font-medium">Education</h1>
+              <h1 className="text-2xl text-red-500 -mt-3">-----</h1>
+              <h1 className="text-2xl text-red-500 font-mono mt-2">
+                2022-Present
+              </h1>
+              <h1 className="mt-2 text-gray-600">Web-Developer</h1>
+              <p className="w-80 mt-3 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum recusandae, cupiditate ullam dolor ratione
+                repellendus.aliquid repudiandae saepe!.
+              </p>
+              <hr className="mt-3" />
+              <h1 className="text-2xl text-red-500 font-mono">2019-2022</h1>
+              <h1 className="mt-2 text-gray-600">Graduate(B.Sc.)</h1>
+              <p className="w-80 mt-3 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum recusandae, cupiditate ullam dolor ratione
+                repellendus.aliquid repudiandae saepe!.
+              </p>
+              <hr className="mt-3" />
+              <h1 className="text-2xl text-red-500 font-mono">2015-2019</h1>
+              <h1 className="mt-2 text-gray-600">
+                High School And Intermediate
+              </h1>
+              <p className="w-80 mt-3 text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum recusandae, cupiditate ullam dolor ratione
+                repellendus.aliquid repudiandae saepe!.
+              </p>
+            </div>
+            <div>
+              <div className="md:w-96 w-full border border-gray-500 px-8 py-5 grid grid-rows-2">
+                <h1 className="text-2xl font-medium">Skills</h1>
+                <h1 className="text-2xl text-red-500 -mt-3">-----</h1>
+              </div>
+              <div className="md:w-96 w-full md:my-10 my-0 px-8 py-5 border border-gray-500">
+                <h1 className="text-2xl font-medium">Language</h1>
+                <h1 className="text-2xl text-red-500 -mt-3">-----</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
