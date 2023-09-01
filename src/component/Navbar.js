@@ -14,9 +14,9 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="sticky top-0 z-30">
-      <div className=" flex shadow-md shadow-black z-50 bg-white relative px-5">
-        <div className="z-50 w-full h-28 flex justify-between items-center ">
+    <header className="sticky top-0 z-30 bg-white h-28 shadow-md shadow-black px-1">
+      <div className="max-w-[1440px] container mx-auto px-5 h-full">
+        <div className="w-full flex justify-between items-center">
           <div className="animate__animated animate__slideInLeft">
             <img
               alt="logo"
@@ -27,7 +27,7 @@ function Navbar() {
               }}
             ></img>
           </div>
-          <div className="hidden items-center absolute right-0 md:flex mr-5 gap-4 text-lg font-serif font-bold animate__animated animate__slideInRight">
+          <div className="hidden  md:flex items-center gap-4 text-lg font-serif font-bold animate__animated animate__slideInRight">
             <Link to="/blog" className="hover:text-red-600">
               BLOG
             </Link>
