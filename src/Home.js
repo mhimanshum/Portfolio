@@ -22,10 +22,9 @@ function Home() {
         setQuote(que);
         const typed = new Typed(el.current, {
           strings: que,
-          // startDelay: 50,
-          // typeSpeed: 30,
-          // backSpeed: 40,
-          // backDelay: 200,
+          delayspeed: 2000,
+          typeSpeed: 20,
+          deletespeed: 10,
         });
 
         return () => {
@@ -57,13 +56,18 @@ function Home() {
             <p className="text-2xl text-white mt-3 animate__animated animate__backInUp">
               Front end Designer | Developer
             </p>
+            <div className="h-96 w-80 text-center mt-5">
+              <h1 className="text-xl items-center text-center text-white font-semibold">
+                <span ref={el}></span>
+              </h1>
+            </div>
           </div>
         </div>
       </div>
 
       <div>
         <div className="max-w-[1440px] container mx-auto px-1 z-50 bg-white md:flex grid grid-rows-3 border-1px border-gray-600">
-          <card className="text-center md:px-16 md:py-12 px-5 py-5 md:items-center border border-gray-400 animate__animated animate__fadeInUp">
+          <card className="text-center  px-5 py-5 md:items-center border border-gray-400 animate__animated animate__fadeInUp">
             <div>
               <h1 className="text-3xl text-gray-500 font-bold ">Who am I?</h1>
               <h1 className="text-3xl font-semibold -mt-4 text-red-400">
@@ -80,7 +84,7 @@ function Home() {
               </p>
             </div>
           </card>
-          <card className=" md:px-16 md:py-12 px-5 py-5 border border-gray-400 animate__animated animate__fadeInUp">
+          <card className="px-5 py-5 border border-gray-400 animate__animated animate__fadeInUp">
             <div>
               <h1 className="text-3xl text-center text-gray-500 font-bold ">
                 Personal info
@@ -113,7 +117,7 @@ function Home() {
               </p>
             </div>
           </card>
-          <card className="md:px-16 md:py-12 py-5 border border-gray-400 animate__animated animate__fadeInUp">
+          <card className="py-5 border border-gray-400 animate__animated animate__fadeInUp">
             <div>
               <h1 className="text-3xl text-center text-gray-500 font-bold">
                 Expertise
@@ -121,83 +125,110 @@ function Home() {
               <h1 className="text-3xl font-semibold -mt-4 text-red-400 text-center">
                 ----{' '}
               </h1>
-              <div className="grid grid-cols-2 gap-5 text-center ml-10 md:ml-5">
-                <div className="text-center">
-                  <div className="flex mt-5">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <AiOutlineHtml5 />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">HTML5</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <BiLogoCss3 />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">CSS3</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <RiReactjsLine />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">ReactJS</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <TbBrandNextjs />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">NextJS</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <TbBrandTailwind />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">Tailwind</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <FcLinux />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">Linux</p>
-                  </div>
+              <div className="grid grid-cols-2 px-10 text-center">
+                <div>
+                  <ul>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <AiOutlineHtml5 className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">HTML5</p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <BiLogoCss3 className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">CSS3</p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <RiReactjsLine className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">REACTJS</p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <TbBrandNextjs className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">NextJS</p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <TbBrandTailwind className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">
+                          Tailwind
+                        </p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <FcLinux className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">Linux</p>
+                      </h1>
+                    </li>
+                  </ul>
                 </div>
-                <div className="w-40 text-center">
-                  <div className="flex mt-5 ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <BsBootstrap />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">Bootstrap</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <DiMaterializecss />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">MaterialUI</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <DiJavascript />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">Javascript</p>
-                  </div>
-                  <div className="flex ">
-                    <h1 className="text-3xl font-semibold text-red-400">
-                      <BsMicrosoft />
-                    </h1>
-                    <p className="text-xl md:w-80 text-gray-500">
-                      Microsoft365
-                    </p>
-                  </div>
+                <div>
+                  <ul>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <BsBootstrap className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">
+                          Bootstrap
+                        </p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <DiMaterializecss className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">
+                          MaterialUI
+                        </p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <DiJavascript className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">
+                          Javascript
+                        </p>
+                      </h1>
+                    </li>
+                    <li>
+                      <h1 className="flex font-semibold text-red-400">
+                        <h1>
+                          <BsMicrosoft className="text-3xl" />
+                        </h1>
+                        <p className="text-xl md:w-80 text-gray-500">
+                          Microsoft365
+                        </p>
+                      </h1>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </card>
         </div>
       </div>
-      {/* <div className="flex h-96  justify-center text-center px-10 py-10">
-          <h1 className="text-xl items-center text-center w-96">
-            <span ref={el}></span>
-          </h1>
-        </div> */}
       <div>
         <div className="max-w-[1440px] container mx-auto px-1 text-center">
           <h1 className="text-4xl font-serif ml-20 mt-12 mb-10 flex gap-2">

@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <>
-      <main className='mx-1'>
+      <main className="mx-1">
         <div className="h-80 bg-gray-900 max-w-[1440px] container mx-auto">
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center max-w-[1440px] container mx-auto">
             <h1 className="absolute font-sans text-white font-bold text-2xl mt-3">
               Developed By Himanshu Maurya
             </h1>
